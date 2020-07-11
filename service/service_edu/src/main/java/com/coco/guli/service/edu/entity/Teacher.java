@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.coco.guli.service.base.model.BaseEntity;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -47,6 +48,7 @@ public class Teacher extends BaseEntity {
     private Integer sort;
 
     @ApiModelProperty(value = "入驻时间")
+    @JsonFormat(timezone = "GMT+8",pattern = "yyyy-MM-dd")
     private Date joinDate;
 
 
